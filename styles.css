@@ -1,0 +1,402 @@
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-family: "Roboto", Arial, sans-serif; /* Material Design Font */
+  color: #37474f; /* Material UI Primary Text Color */
+  background-color: #f5f5f5; /* Material Background Color */
+  margin: 0;
+  padding: 0;
+}
+body.dark {
+  background-color: #121212; /* Material Dark Background */
+  color: #e0e0e0; /* Material UI Text Color for Dark Mode */
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 3.5rem;
+  height: 1.75rem;
+  background-color: #f5f5f5;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Material Shadow */
+}
+.dark-mode-toggle .toggle-circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  transition: left 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Material Shadow */
+}
+body.dark .dark-mode-toggle {
+  background-color: #37474f;
+}
+body.dark .dark-mode-toggle .toggle-circle {
+  left: calc(100% - 1.75rem);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff; /* Light Background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Material Shadow */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Fixed Navbar */
+}
+.navbar a {
+  color: #37474f;
+  font-weight: 500; /* Material Font Weight */
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+.navbar a:hover {
+  color: #1e88e5; /* Material Primary Color Hover */
+}
+.navbar .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.navbar .hamburger {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .navbar .hamburger {
+    display: block;
+    background-color: #1e88e5;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
+  .nav-menu {
+    display: none; /* Hide menu on smaller screens */
+  }
+}
+
+/* Mobile Menu */
+#mobileMenu {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+}
+#mobileMenu a {
+  color: #37474f;
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+  text-align: center;
+  display: block;
+  transition: color 0.3s ease-in-out;
+}
+#mobileMenu a:hover {
+  color: #1e88e5;
+}
+
+/* Button Styles */
+.button {
+  background-color: #1e88e5; /* Material Primary Button Color */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px; /* Material Button Radius */
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Material Shadow */
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #1565c0; /* Darker Shade for Hover */
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: inherit; /* Keep same background color */
+  transition: background-color 0.3s ease-in-out;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: inherit;
+  font-weight: 600; /* Material Bold */
+  transition: color 0.3s ease-in-out;
+}
+body.dark .section-title {
+  color: #e0e0e0;
+}
+.section-description {
+  color: #546e7a; /* Material Secondary Text Color */
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  transition: color 0.3s ease-in-out;
+}
+body.dark .section-description {
+  color: #bdbdbd;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.carousel .carousel-item {
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+.carousel .carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+}
+.carousel .carousel-control {
+  position: absolute;
+  top: 50%;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Material Shadow */
+}
+.carousel .carousel-control:hover {
+  background-color: #e0e0e0; /* Hover Color */
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #ffffff, #f5f5f5); /* Material Light Footer */
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #37474f;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Material Shadow */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+body.dark footer {
+  background: linear-gradient(to right, #263238, #37474f); /* Material Dark Footer */
+  color: #e0e0e0;
+}
+/* Base Styles */
+body {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-family: "Roboto", Arial, sans-serif; /* Material Design Font */
+  color: #37474f; /* Material UI Primary Text Color */
+  background-color: #f5f5f5; /* Material Background Color */
+  margin: 0;
+  padding: 0;
+}
+body.dark {
+  background-color: #121212; /* Material Dark Background */
+  color: #e0e0e0; /* Material UI Text Color for Dark Mode */
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 3.5rem;
+  height: 1.75rem;
+  background-color: #f5f5f5;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Material Shadow */
+}
+.dark-mode-toggle .toggle-circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  transition: left 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Material Shadow */
+}
+body.dark .dark-mode-toggle {
+  background-color: #37474f;
+}
+body.dark .dark-mode-toggle .toggle-circle {
+  left: calc(100% - 1.75rem);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff; /* Light Background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Material Shadow */
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Fixed Navbar */
+}
+.navbar a {
+  color: #37474f;
+  font-weight: 500; /* Material Font Weight */
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+.navbar a:hover {
+  color: #1e88e5; /* Material Primary Color Hover */
+}
+.navbar .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.navbar .hamburger {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .navbar .hamburger {
+    display: block;
+    background-color: #1e88e5;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
+  .nav-menu {
+    display: none; /* Hide menu on smaller screens */
+  }
+}
+
+/* Mobile Menu */
+#mobileMenu {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+}
+#mobileMenu a {
+  color: #37474f;
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+  text-align: center;
+  display: block;
+  transition: color 0.3s ease-in-out;
+}
+#mobileMenu a:hover {
+  color: #1e88e5;
+}
+
+/* Button Styles */
+.button {
+  background-color: #1e88e5; /* Material Primary Button Color */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px; /* Material Button Radius */
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Material Shadow */
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #1565c0; /* Darker Shade for Hover */
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: inherit; /* Keep same background color */
+  transition: background-color 0.3s ease-in-out;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: inherit;
+  font-weight: 600; /* Material Bold */
+  transition: color 0.3s ease-in-out;
+}
+body.dark .section-title {
+  color: #e0e0e0;
+}
+.section-description {
+  color: #546e7a; /* Material Secondary Text Color */
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  transition: color 0.3s ease-in-out;
+}
+body.dark .section-description {
+  color: #bdbdbd;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.carousel .carousel-item {
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+.carousel .carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+}
+.carousel .carousel-control {
+  position: absolute;
+  top: 50%;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Material Shadow */
+}
+.carousel .carousel-control:hover {
+  background-color: #e0e0e0; /* Hover Color */
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #ffffff, #f5f5f5); /* Material Light Footer */
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #37474f;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Material Shadow */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+body.dark footer {
+  background: linear-gradient(to right, #263238, #37474f); /* Material Dark Footer */
+  color: #e0e0e0;
+}

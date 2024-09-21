@@ -1,0 +1,188 @@
+// // Variables
+// $primary-color: #38a169; // Green
+// $secondary-color: #2d3748; // Dark gray
+// $light-color: #edf2f7; // Light gray
+// $dark-bg-color: #1a202c; // Dark background
+// $text-color: #2d3748; // Text color for light mode
+// $text-light-color: #e2e8f0; // Text color for dark mode
+// $shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+// // Mixins
+// @mixin flex-center {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// @mixin transition($property, $duration: 0.3s, $ease: ease-in-out) {
+//   transition: $property $duration $ease;
+// }
+
+// // Global Styles
+// body {
+//   @include transition(all);
+//   font-family: 'Sans-Serif', Arial, sans-serif;
+//   color: $text-color;
+//   background-color: $light-color;
+//   margin: 0;
+//   padding: 0;
+
+//   &.dark {
+//     background-color: $dark-bg-color;
+//     color: $text-light-color;
+//   }
+// }
+
+// // Dark Mode Toggle
+// .dark-mode-toggle {
+//   @include flex-center;
+//   position: fixed;
+//   top: 1rem;
+//   right: 1rem;
+//   width: 3.5rem;
+//   height: 1.75rem;
+//   background-color: $light-color;
+//   border-radius: 1rem;
+//   cursor: pointer;
+//   @include transition(all);
+
+//   .toggle-circle {
+//     width: 1.5rem;
+//     height: 1.5rem;
+//     background-color: white;
+//     border-radius: 50%;
+//     position: absolute;
+//     top: 0.125rem;
+//     left: 0.125rem;
+//     @include transition(all);
+//   }
+
+//   &.dark {
+//     background-color: $secondary-color;
+
+//     .toggle-circle {
+//       left: calc(100% - 1.75rem);
+//     }
+//   }
+// }
+
+// // Navbar
+// .navbar {
+//   @include flex-center;
+//   justify-content: space-between;
+//   background-color: $light-color;
+//   box-shadow: $shadow;
+//   padding: 1rem;
+
+//   a {
+//     color: $text-color;
+//     @include transition(color);
+//     &:hover {
+//       color: $primary-color;
+//     }
+//   }
+
+//   .nav-menu {
+//     @include flex-center;
+//     gap: 2rem;
+//   }
+
+//   .hamburger {
+//     display: none;
+//     @media (max-width: 1024px) {
+//       display: block;
+//       background-color: $primary-color;
+//       border: none;
+//       color: white;
+//       padding: 0.5rem;
+//       border-radius: 0.25rem;
+//     }
+//   }
+// }
+
+// // Button Styles
+// .button {
+//   background-color: $primary-color;
+//   color: white;
+//   padding: 0.75rem 1.5rem;
+//   border-radius: 0.5rem;
+//   text-align: center;
+//   @include transition(background-color);
+
+//   &:hover {
+//     background-color: darken($primary-color, 10%);
+//   }
+// }
+
+// // Sections
+// .section {
+//   padding: 4rem 0;
+//   text-align: center;
+
+//   &-title {
+//     font-size: 2rem;
+//     margin-bottom: 1.5rem;
+//     color: $text-color;
+
+//     .dark & {
+//       color: $text-light-color;
+//     }
+//   }
+
+//   &-description {
+//     color: $text-color;
+//     max-width: 600px;
+//     margin: 0 auto;
+//     line-height: 1.6;
+
+//     .dark & {
+//       color: $text-light-color;
+//     }
+//   }
+// }
+
+// // Carousel
+// .carousel {
+//   @include flex-center;
+//   position: relative;
+//   overflow: hidden;
+
+//   .carousel-item {
+//     width: 100%;
+//     opacity: 0;
+//     visibility: hidden;
+//     @include transition(all);
+    
+//     &.active {
+//       opacity: 1;
+//       visibility: visible;
+//     }
+//   }
+
+//   .carousel-control {
+//     position: absolute;
+//     top: 50%;
+//     background-color: white;
+//     border-radius: 50%;
+//     padding: 0.5rem;
+//     cursor: pointer;
+//     @include transition(background-color);
+
+//     &:hover {
+//       background-color: $light-color;
+//     }
+//   }
+// }
+
+// // Footer
+// footer {
+//   background: linear-gradient(to right, $light-color, $light-color);
+//   padding: 4rem 0;
+//   text-align: center;
+//   color: $text-color;
+
+//   .dark & {
+//     background: linear-gradient(to right, $secondary-color, $secondary-color);
+//     color: $text-light-color;
+//   }
+// }

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobhana Susil - Web Developer & Digital Marketing Expert | Freelance Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Sobhana Susil is a professional web developer and digital marketing expert with over 1.5 years of experience. Explore my portfolio to see my web development and digital marketing services.">
+    <meta name="keywords" content="Web Development, Digital Marketing, Freelance Web Developer, React Developer, Web Developer in India, SEO Expert, Digital Marketing Services, Frontend Developer, Full-Stack Developer, Website Design, Marketing Strategy">
+    <meta name="author" content="Sobhana Susil">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sobhana Susil - Web Developer & Digital Marketing Expert">
+    <meta property="og:description" content="Explore Sobhana Susil's portfolio showcasing projects in web development and digital marketing.">
+    <meta property="og:image" content="https://source.unsplash.com/random/200x200?portrait">
+    <meta property="og:url" content="http://yourportfolio.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sobhana Susil - Web Developer & Digital Marketing Expert">
+    <meta name="twitter:description" content="Explore Sobhana Susil's portfolio showcasing projects in web development and digital marketing.">
+    <meta name="twitter:image" content="https://source.unsplash.com/random/200x200?portrait">
+    
+    <!-- Link to CSS -->
+    <link href="styles.css" rel="stylesheet"> <!-- Link to the compiled CSS -->
+</head>
+
+<body class="font-sans antialiased">
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <div class="toggle-circle"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+            <a href="#" class="text-xl font-semibold text-green-500">Sobhana Susil Portfolio</a>
+            <button id="menuToggle" class="hamburger lg:hidden">☰</button>
+            <nav id="navMenu" class="nav-menu hidden lg:flex space-x-8">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Projects</a>
+                <a href="#">Testimonials</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <nav id="mobileMenu" class="lg:hidden hidden flex-col items-center bg-white shadow-md w-full">
+            <a href="#" class="block py-2 px-4 text-gray-700 hover:text-green-500">Home</a>
+            <a href="#" class="block py-2 px-4 text-gray-700 hover:text-green-500">About</a>
+            <a href="#" class="block py-2 px-4 text-gray-700 hover:text-green-500">Projects</a>
+            <a href="#" class="block py-2 px-4 text-gray-700 hover:text-green-500">Testimonials</a>
+            <a href="#" class="block py-2 px-4 text-gray-700 hover:text-green-500">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <div class="flex justify-center">
+                <img src="https://source.unsplash.com/random/200x200?portrait" alt="Sobhana Susil - Web Developer & Digital Marketer" class="rounded-full w-40 h-40">
+            </div>
+            <h1 class="text-4xl font-bold mt-6 section-title">Hello, I'm Sobhana Susil.</h1>
+            <p class="mt-4 text-xl section-description">A Web Developer and Digital Marketing Expert with 1.5 years of experience in building robust web applications and enhancing digital presence. I offer comprehensive digital marketing and web development services to help businesses grow online.</p>
+            <a href="#" class="mt-6 button inline-block">Hire Me</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-semibold section-title">Web Development & Digital Marketing Projects</h2>
+            <p class="mt-4 section-description">Explore some of the projects I've successfully delivered, showcasing my skills in web development and digital marketing:</p>
+
+            <!-- Project Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <!-- Project 1 -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-green-500">Marketing Dashboard for Alpha Marketing</h3>
+                    <p class="mt-4 text-gray-600">Built a comprehensive marketing dashboard using React, Redux, and Material-UI. The dashboard helps in tracking KPIs and managing marketing campaigns effectively.</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-green-500">Internal Tool for Beta Tech Solutions</h3>
+                    <p class="mt-4 text-gray-600">Developed an internal tool with React, Node.js, and MongoDB to manage project workflows and team collaborations for a tech company.</p>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-green-500">Creative Portfolio for Gamma Creative Studios</h3>
+                    <p class="mt-4 text-gray-600">Created a responsive and visually appealing portfolio site using Next.js and Tailwind CSS, showcasing the creative work of the agency.</p>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-green-500">E-commerce Platform for XYZ Clothing</h3>
+                    <p class="mt-4 text-gray-600">Built a multi-page e-commerce platform using React and Firebase, featuring secure user authentication, payment integration, and dynamic product management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-semibold section-title">Client Testimonials</h2>
+            <p class="mt-4 section-description">Here’s what my clients have to say about my work:</p>
+
+            <!-- Testimonial Carousel -->
+            <div class="relative max-w-3xl mx-auto mt-8">
+                <div class="carousel">
+                    <div class="carousel-item active">
+                        <p class="text-gray-600">"Sobhana's marketing dashboard has transformed the way we approach our campaigns. His expertise in both development and digital marketing is top-notch!"</p>
+                        <span class="text-gray-700 font-semibold mt-4 block">- Alpha Marketing, CEO</span>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="text-gray-600">"The internal tool built for us streamlined our project management and improved team productivity significantly."</p>
+                        <span class="text-gray-700 font-semibold mt-4 block">- Beta Tech Solutions, CTO</span>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="text-gray-600">"The portfolio site Sobhana developed exceeded our expectations. It perfectly captures our brand's essence!"</p>
+                        <span class="text-gray-700 font-semibold mt-4 block">- Gamma Creative Studios, Founder</span>
+                    </div>
+                </div>
+                <button class="carousel-control-prev text-gray-700 absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full">&#8592;</button>
+                <button class="carousel-control-next text-gray-700 absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-semibold section-title">Contact Me for Web Development & Digital Marketing Services</h2>
+            <p class="mt-4 section-description">Have a project idea in mind? Get in touch and let's chat!</p>
+            <a href="#" class="mt-6 button py-3 px-6 inline-block">Request a Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gradient-to-r from-blue-100 to-blue-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-xl font-semibold">© 2024 Sobhana Susil. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Include JavaScript -->
+    <script src="main.js"></script>
+</body>
+
+</html>
